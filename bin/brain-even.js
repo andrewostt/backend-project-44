@@ -22,7 +22,7 @@ function brainEven() {
             }
         }
     }
-    console.log(`Congratulations, ${questionName}`);
+    console.log(`Congratulations, ${questionName}!`);
 }
 
 brainEven();
