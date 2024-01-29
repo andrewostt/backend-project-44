@@ -24,7 +24,7 @@ function brainPrime() {
             }
         }
     }
-    console.log(`Congratulations, ${questionName}`);
+    console.log(`Congratulations, ${questionName}!`);
 }
 
 brainPrime();
