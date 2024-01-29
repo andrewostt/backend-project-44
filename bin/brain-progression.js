@@ -5,14 +5,14 @@ import welcomeUser, { questionName } from '../src/cli.js';
 function getRandomNumber(min, max) {
     min = Math.floor(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.floor((Math.random() * (max - min + 1)) + min);
 }
 
 function brainProg() {
     welcomeUser();
     console.log(`What number is missing in the progression?`);
     for (let i = 0; i < 3; i += 1) {
-        const length = Math.floor(Math.random() * 6) + 4;
+        const length = Math.floor(Math.random() * 6) + 5;
         const indexMissing = getRandomNumber(0, length - 1);
         const start = Math.floor(Math.random() * 100);
         const diff = Math.floor(Math.random() * 10) + 1;
