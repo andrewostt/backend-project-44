@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-var questionName = '';
+let questionName;
 export function welcomeUser() {
   console.log('Welcome to the Brain Games!');
   questionName = readlineSync.question('May I have your name? ');

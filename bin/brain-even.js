@@ -15,9 +15,9 @@ function brainEven() {
         return console.log(`'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${questionName}!`);
       }
     } else if (answer === 'no') {
-        console.log('Correct!');
-      } else {
-        return console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${questionName}!`);
+      console.log('Correct!');
+    } else {
+      return console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${questionName}!`);
     }
   }
   return console.log(`Congratulations, ${questionName}!`);
