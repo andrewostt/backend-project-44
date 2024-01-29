@@ -5,7 +5,6 @@ extends: eslint:recommended
 parserOptions:
   ecmaVersion: latest
   sourceType: module
-rules: {
-  no-console: false
-  import/extensions: false
-}
+rules: 
+  no-console: 0
+  import/extensions: 0

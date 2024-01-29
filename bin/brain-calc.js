@@ -23,10 +23,10 @@ function brainCalc() {
         if (Number(answer) === result) {
             console.log(`Correct!`);
         } else {
-            return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, Sam!`);
+            return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${questionName}!`);
         }
     }
-    console.log(`Congratulations, ${questionName}`);
+    console.log(`Congratulations, ${questionName}!`);
 }
 
 brainCalc();
