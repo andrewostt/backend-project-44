@@ -2,9 +2,8 @@
 import readlineSync from "readline-sync";
 import welcomeUser, {questionName} from "../src/cli.js"
 
-welcomeUser();
-
 function brainCalc() {
+    welcomeUser();
     const expressions = ['-', '+', '*'];
     console.log(`What is the result of the expression? `);
     for (let i = 0; i < 3; i += 1) {

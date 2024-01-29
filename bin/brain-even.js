@@ -2,9 +2,8 @@
 import welcomeUser, {questionName} from "../src/cli.js"
 import readlineSync from 'readline-sync';
 
-welcomeUser();
-
 function brainEven() {
+    welcomeUser();
     console.log(`Answer "yes" if the number is even, otherwise answer "no".`);
     for (let i = 0; i < 3; i += 1) {
         const numQuestion = Math.round(Math.random() * 100);
