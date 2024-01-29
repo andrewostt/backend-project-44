@@ -1,13 +1,15 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { welcomeUser, questionName } from '../src/cli.js';
+import * as user from '../src/cli.js';
 
 function getRandomNumber(min, max) {
   return Math.floor((Math.random() * (max - min + 1)) + min);
 }
 
 function brainProg() {
-  welcomeUser();
+  user.welcome;
+  user.questionName;
+  user.hello;
   console.log('What number is missing in the progression?');
   for (let i = 0; i < 3; i += 1) {
     const length = Math.floor(Math.random() * 6) + 5;
@@ -27,10 +29,10 @@ function brainProg() {
     if (Number(answer) === missingChar) {
       console.log('Correct!');
     } else {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${missingChar}'.\nLet's try again, ${questionName}!`);
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${missingChar}'.\nLet's try again, ${user.questionName}!`);
     }
   }
-  return console.log(`Congratulations, ${questionName}!`);
+  return console.log(`Congratulations, ${user.questionName}!`);
 }
 
 brainProg();

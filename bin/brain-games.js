@@ -1,4 +1,6 @@
 #!/usr/bin/env node
-import { welcomeUser } from '../src/cli.js';
+import * as user from '../src/cli.js';
 
-welcomeUser();
+user.welcome;
+user.questionName;
+user.hello;

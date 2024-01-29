@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { welcomeUser, questionName } from '../src/cli.js';
+import * as user from '../src/cli.js';
 
 function brainCalc() {
-  welcomeUser();
+  user.welcome;
+  user.questionName;
+  user.hello;
   const expressions = ['-', '+', '*'];
   console.log('What is the result of the expression?');
   for (let i = 0; i < 3; i += 1) {
@@ -22,10 +24,10 @@ function brainCalc() {
     if (Number(answer) === result) {
       console.log('Correct!');
     } else {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${questionName}!`);
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${user.questionName}!`);
     }
   }
-  return console.log(`Congratulations, ${questionName}!`);
+  return console.log(`Congratulations, ${user.questionName}!`);
 }
 
 brainCalc();

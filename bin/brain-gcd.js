@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { welcomeUser, questionName } from '../src/cli.js';
+import * as user from '../src/cli.js';
 
 function brainGCD() {
-  welcomeUser();
+  user.welcome;
+  user.questionName;
+  user.hello;
   console.log('Find the greatest common divisor of given numbers.');
   for (let i = 0; i < 3; i += 1) {
     let firstNum = Math.round(Math.random() * 100);
@@ -17,10 +19,10 @@ function brainGCD() {
     if (Number(answer) === firstNum) {
       console.log('Correct!');
     } else {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${firstNum}'.\nLet's try again, ${questionName}!`);
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${firstNum}'.\nLet's try again, ${user.questionName}!`);
     }
   }
-  return console.log(`Congratulations, ${questionName}!`);
+  return console.log(`Congratulations, ${user.questionName}!`);
 }
 
 brainGCD();
