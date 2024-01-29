@@ -24,7 +24,8 @@ function brainProg() {
         }
         const missingChar = progression[indexMissing];
         progression[indexMissing] = '..';
-        const answer = readlineSync.question(`Question: ${progression}\nYour answer: `);
+        console.log(`Question: ${progression.join(' ')}`)
+        const answer = readlineSync.question(`Your answer: `);
         if (Number(answer) === missingChar) {
             console.log(`Correct!`);
         } else {
