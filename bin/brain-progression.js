@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import welcomeUser, { questionName } from '../src/cli.js';
+import { welcomeUser, questionName } from '../src/cli.js';
 
 function getRandomNumber(min, max) {
   return Math.floor((Math.random() * (max - min + 1)) + min);
@@ -17,17 +17,17 @@ function brainProg() {
     const progression = [];
 
     for (let y = 0; y < length; y += 1) {
-        const value = start + diff * y;
-        progression.push(value);
+      const value = start + diff * y;
+      progression.push(value);
     }
     const missingChar = progression[indexMissing];
     progression[indexMissing] = '..';
-    console.log(`Question: ${progression.join(' ')}`)
+    console.log(`Question: ${progression.join(' ')}`);
     const answer = readlineSync.question('Your answer: ');
     if (Number(answer) === missingChar) {
-        console.log('Correct!');
+      console.log('Correct!');
     } else {
-        return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${missingChar}'.\nLet's try again, ${questionName}!`);
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${missingChar}'.\nLet's try again, ${questionName}!`);
     }
   }
   return console.log(`Congratulations, ${questionName}!`);

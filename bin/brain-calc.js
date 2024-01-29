@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import welcomeUser, { questionName } from '../src/cli.js';
+import { welcomeUser, questionName } from '../src/cli.js';
 
 function brainCalc() {
   welcomeUser();
@@ -12,17 +12,17 @@ function brainCalc() {
     const randomNum = Math.floor(Math.random() * 3);
     let result = 0;
     if (expressions[randomNum] === '-') {
-        result = numQuestion1 - numQuestion2;
+      result = numQuestion1 - numQuestion2;
     } else if (expressions[randomNum] === '+') {
-        result = numQuestion1 + numQuestion2;
+      result = numQuestion1 + numQuestion2;
     } else {
-        result = numQuestion1 * numQuestion2;
+      result = numQuestion1 * numQuestion2;
     }
     const answer = readlineSync.question(`Question: ${numQuestion1} ${expressions[randomNum]} ${numQuestion2}\nYour answer: `);
     if (Number(answer) === result) {
-        console.log('Correct!');
+      console.log('Correct!');
     } else {
-        return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${questionName}!`);
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${questionName}!`);
     }
   }
   return console.log(`Congratulations, ${questionName}!`);

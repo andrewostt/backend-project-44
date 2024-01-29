@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import welcomeUser, { questionName } from '../src/cli.js';
+import { welcomeUser, questionName } from '../src/cli.js';
 
 function brainGCD() {
   welcomeUser();
@@ -10,14 +10,14 @@ function brainGCD() {
     let secondNum = Math.round(Math.random() * 100);
     const answer = readlineSync.question(`Question: ${firstNum} ${secondNum}\nYour answer: `);
     while (secondNum !== 0) {
-        const t = secondNum;
-        secondNum = firstNum % secondNum;
-        firstNum = t;
+      const t = secondNum;
+      secondNum = firstNum % secondNum;
+      firstNum = t;
     }
     if (Number(answer) === firstNum) {
-        console.log('Correct!');
+      console.log('Correct!');
     } else {
-        return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${firstNum}'.\nLet's try again, ${questionName}!`);
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${firstNum}'.\nLet's try again, ${questionName}!`);
     }
   }
   return console.log(`Congratulations, ${questionName}!`);
