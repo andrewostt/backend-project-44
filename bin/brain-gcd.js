@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { welcomeUser } from '../src/cli.js';
+import welcomeUser from '../src/cli.js';
 
 function brainGCD() {
   const questionName = welcomeUser();
