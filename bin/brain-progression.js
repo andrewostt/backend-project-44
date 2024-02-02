@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { welcomeUser, questionName } from '../src/cli.js';
+import { welcomeUser } from '../src/cli.js';
 
 function getRandomNumber(min, max) {
   return Math.floor((Math.random() * (max - min + 1)) + min);
 }
 
 function brainProg() {
-  welcomeUser();
+  const questionName = welcomeUser();
   console.log('What number is missing in the progression?');
   for (let i = 0; i < 3; i += 1) {
     const length = Math.floor(Math.random() * 6) + 5;

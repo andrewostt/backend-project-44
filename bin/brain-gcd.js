@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { welcomeUser, questionName } from '../src/cli.js';
+import { welcomeUser } from '../src/cli.js';
 
 function brainGCD() {
-  welcomeUser();
+  const questionName = welcomeUser();
   console.log('Find the greatest common divisor of given numbers.');
   for (let i = 0; i < 3; i += 1) {
     let firstNum = Math.round(Math.random() * 100);
