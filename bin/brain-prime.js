@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import logic from "./logic.js";
+import logic from './logic.js';
 
 function brainPrime() {
   logic('prime');
