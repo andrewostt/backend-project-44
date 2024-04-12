@@ -26,15 +26,11 @@ export default function logic(name) {
       } else {
         result = numQuestion1 * numQuestion2;
       }
-      const answer = readlineSync.question(
-        `Question: ${numQuestion1} ${expressions[randomNum]} ${numQuestion2}\nYour answer: `
-      );
+      const answer = readlineSync.question(`Question: ${numQuestion1} ${expressions[randomNum]} ${numQuestion2}\nYour answer: `);
       if (Number(answer) === result) {
         console.log('Correct!');
       } else {
-        return console.log(
-          `'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${questionName}!`
-        );
+        return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${questionName}!`);
       }
     }
   } 
@@ -42,23 +38,17 @@ export default function logic(name) {
     console.log('Answer "yes" if the number is even, otherwise answer "no".');
     for (let i = 0; i < 3; i += 1) {
       const numQuestion = Math.round(Math.random() * 100);
-      const answer = readlineSync.question(
-        `Question: ${numQuestion}\nYour answer: `
-      );
+      const answer = readlineSync.question(`Question: ${numQuestion}\nYour answer: `);
       if (numQuestion % 2 === 0) {
         if (answer === 'yes') {
           console.log('Correct!');
         } else {
-          return console.log(
-            `'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${questionName}!`
-          );
+          return console.log(`'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${questionName}!`);
         }
       } else if (answer === 'no') {
         console.log('Correct!');
       } else {
-        return console.log(
-          `'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${questionName}!`
-        );
+        return console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${questionName}!`);
       }
     }
   }
@@ -67,9 +57,7 @@ export default function logic(name) {
     for (let i = 0; i < 3; i += 1) {
       let firstNum = Math.round(Math.random() * 100);
       let secondNum = Math.round(Math.random() * 100);
-      const answer = readlineSync.question(
-        `Question: ${firstNum} ${secondNum}\nYour answer: `
-      );
+      const answer = readlineSync.question(`Question: ${firstNum} ${secondNum}\nYour answer: `);
       while (secondNum !== 0) {
         const t = secondNum;
         secondNum = firstNum % secondNum;
@@ -78,9 +66,7 @@ export default function logic(name) {
       if (Number(answer) === firstNum) {
         console.log('Correct!');
       } else {
-        return console.log(
-          `'${answer}' is wrong answer ;(. Correct answer was '${firstNum}'.\nLet's try again, ${questionName}!`
-        );
+        return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${firstNum}'.\nLet's try again, ${questionName}!`);
       }
     }
   }
@@ -104,35 +90,25 @@ export default function logic(name) {
       if (Number(answer) === missingChar) {
         console.log('Correct!');
       } else {
-        return console.log(
-          `'${answer}' is wrong answer ;(. Correct answer was '${missingChar}'.\nLet's try again, ${questionName}!`
-        );
+        return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${missingChar}'.\nLet's try again, ${questionName}!`);
       }
     }
   }
   if (name === 'prime') {
-    console.log(
-      'Answer "yes" if given number is prime. Otherwise answer "no".'
-    );
+    console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
     for (let i = 0; i < 3; i += 1) {
       const numQuestion = Math.round(Math.random() * 100);
-      const answer = readlineSync.question(
-        `Question: ${numQuestion}\nYour answer: `
-      );
+      const answer = readlineSync.question(`Question: ${numQuestion}\nYour answer: `);
       if (primeNumbers.includes(numQuestion)) {
         if (answer === 'yes') {
           console.log('Correct');
         } else {
-          return console.log(
-            `'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${questionName}!`
-          );
+          return console.log(`'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${questionName}!`);
         }
       } else if (answer === 'no') {
         console.log("Correct!");
       } else {
-        return console.log(
-          `'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${questionName}!`
-        );
+        return console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${questionName}!`);
       }
     }
   }
