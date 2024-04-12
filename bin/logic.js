@@ -33,7 +33,7 @@ export default function logic(name) {
         return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${questionName}!`);
       }
     }
-  } 
+  }
   if (name === 'even') {
     console.log('Answer "yes" if the number is even, otherwise answer "no".');
     for (let i = 0; i < 3; i += 1) {
@@ -84,8 +84,8 @@ export default function logic(name) {
         progression.push(value);
       }
       const missingChar = progression[indexMissing];
-      progression[indexMissing] = "..";
-      console.log(`Question: ${progression.join(" ")}`);
+      progression[indexMissing] = '..';
+      console.log(`Question: ${progression.join(' ')}`);
       const answer = readlineSync.question('Your answer: ');
       if (Number(answer) === missingChar) {
         console.log('Correct!');
@@ -106,7 +106,7 @@ export default function logic(name) {
           return console.log(`'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${questionName}!`);
         }
       } else if (answer === 'no') {
-        console.log("Correct!");
+        console.log('Correct!');
       } else {
         return console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${questionName}!`);
       }
