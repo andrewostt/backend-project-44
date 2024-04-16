@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import welcomeUser from './cli.js';
 
 function getRandomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 export default function brainProgressionLogic() {

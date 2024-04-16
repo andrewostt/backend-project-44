@@ -2,20 +2,20 @@ import readlineSync from 'readline-sync';
 import welcomeUser from './cli.js';
 
 export default function brainCalcLogic() {
-    const expressions = ['-', '+', '*'];
-    const questionName = welcomeUser();
-    console.log('What is the result of the expression?');
+  const expressions = ['-', '+', '*'];
+  const questionName = welcomeUser();
+  console.log('What is the result of the expression?');
   for (let i = 0; i < 3; i += 1) {
     const numQuestion1 = Math.round(Math.random() * 100);
     const numQuestion2 = Math.round(Math.random() * 100);
     const randomNum = Math.floor(Math.random() * 3);
     let result = 0;
     if (expressions[randomNum] === '-') {
-    result = numQuestion1 - numQuestion2;
+      result = numQuestion1 - numQuestion2;
     } else if (expressions[randomNum] === '+') {
-    result = numQuestion1 + numQuestion2;
+      result = numQuestion1 + numQuestion2;
     } else {
-    result = numQuestion1 * numQuestion2;
+      result = numQuestion1 * numQuestion2;
     }
     const answer = readlineSync.question(`Question: ${numQuestion1} ${expressions[randomNum]} ${numQuestion2}\nYour answer: `);
     if (Number(answer) === result) {
