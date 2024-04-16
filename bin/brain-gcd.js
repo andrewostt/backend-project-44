@@ -1,8 +1,4 @@
 #!/usr/bin/env node
-import logic from './logic.js';
+import brainGCDLogic from '../src/brainGCDLogic.js';
 
-function brainGCD() {
-  logic('gcd');
-}
-
-brainGCD();
+brainGCDLogic();

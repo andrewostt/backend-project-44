@@ -1,8 +1,4 @@
 #!/usr/bin/env node
-import logic from './logic.js';
+import brainProgressionLogic from '../src/brainProgressionLogic.js';
 
-function brainProg() {
-  logic('progression');
-}
-
-brainProg();
+brainProgressionLogic();

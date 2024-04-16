@@ -1,8 +1,4 @@
 #!/usr/bin/env node
-import logic from './logic.js';
+import brainCalcLogic from '../src/brainCalcLogic.js';
 
-function brainCalc() {
-  logic('calc');
-}
-
-brainCalc();
+brainCalcLogic();
