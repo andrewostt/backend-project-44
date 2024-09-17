@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 import { askName } from "../src/cli.js";
 
-console.log('Welcome to the Brain Games!');
-askName();
+export function welcome() {
+    console.log('Welcome to the Brain Games!');
+    askName();
+}
+
+welcome();
