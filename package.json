@@ -4,11 +4,13 @@
   "description": "[![Actions Status](https://github.com/andrewostt/backend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/andrewostt/backend-project-44/actions)",
   "main": "index.js",
   "bin": {
-    "code": "bin/brain-games.js"
+    "code": "bin/brain-games.js",
+    "brain-games": "bin/brain-games.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "type": "module"
 }
