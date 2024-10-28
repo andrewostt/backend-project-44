@@ -1,12 +1,12 @@
 import readlineSync from "readline-sync";
 import greetings from "../src/cli.js";
-import geometricProgression from "../src/geometricProggresion.js";
+import arithmeticProgression from "../src/arithmeticProgression.js";
 
 export default function brainProgression() {
   const name = greetings();
   console.log("What number is missing in the progression?");
   for (let i = 0; i < 3; i += 1) {
-    const progression = geometricProgression();
+    const progression = arithmeticProgression();
     const question = readlineSync.question(
       `Question: ${progression.progression}\nYour answer: `
     );
