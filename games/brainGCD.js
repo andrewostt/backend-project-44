@@ -1,6 +1,6 @@
 import readlineSync from "readline-sync";
 import greetings from "../src/cli.js";
-import gcd from "../src/gcd.js"
+import gcd from "../src/gcd.js";
 
 export default function brainGCD() {
   const name = greetings();

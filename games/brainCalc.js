@@ -1,5 +1,5 @@
 import readlineSync from "readline-sync";
-import greetings from '../src/cli.js';
+import greetings from "../src/cli.js";
 
 export default function brainCalc() {
   const operations = ["+", "-", "*"];
