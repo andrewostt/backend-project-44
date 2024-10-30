@@ -1,6 +1,6 @@
-import readlineSync from "readline-sync";
-import greetings from "../src/cli.js";
-import isPrime from "../src/isPrime.js";
+import readlineSync from 'readline-sync';
+import greetings from '../src/cli.js';
+import isPrime from '../src/isPrime.js';
 
 export default function brainPrime() {
   const name = greetings();
@@ -8,15 +8,15 @@ export default function brainPrime() {
   for (let i = 0; i < 3; i += 1) {
     const randomNum = Math.floor(Math.random() * 100);
     const question = readlineSync.question(
-      `Question: ${randomNum}\nYour answer: `
+      `Question: ${randomNum}\nYour answer: `,
     );
     const answer = isPrime(randomNum);
     if (question !== answer) {
       return console.log(
-        `${question} is wrong answer ;(. Correct answer was ${answer}. Let's try again, ${name}!`
+        `${question} is wrong answer ;(. Correct answer was ${answer}. Let's try again, ${name}!`,
       );
     }
-    console.log("Correct!");
+    console.log('Correct!');
   }
   return console.log(`Congratulations, ${name}!`);
 }

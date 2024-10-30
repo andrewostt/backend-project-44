@@ -1,8 +1,10 @@
 export default function gcd(a, b) {
-  while (b !== 0) {
-    let temp = b;
-    b = a % b;
-    a = temp;
+  var c = a;
+  var d = b;
+  while (d !== 0) {
+    const temp = d;
+    d = c % d;
+    c = temp;
   }
-  return a;
+  return c;
 }

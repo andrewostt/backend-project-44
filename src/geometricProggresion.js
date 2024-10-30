@@ -6,14 +6,14 @@ export default function geometricProgression() {
   };
   const progression = [];
   for (let i = 0; i < 10; i += 1) {
-    progression.push(randomNums.start * Math.pow(randomNums.ratio, i));
+    progression.push(randomNums.start * (randomNums.ratio ** i));
   }
   const result = {
     swappedNum: progression[randomNums.swapNum],
-    progression: "",
+    progression: '',
   };
-  progression[randomNums.swapNum] = "..";
-  result.progression = progression.join(" ");
+  progression[randomNums.swapNum] = '..';
+  result.progression = progression.join(' ');
   return result;
 }
 
