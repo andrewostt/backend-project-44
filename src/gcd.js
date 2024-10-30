@@ -1,6 +1,6 @@
 export default function gcd(a, b) {
-  var c = a;
-  var d = b;
+  let c = a;
+  let d = b;
   while (d !== 0) {
     const temp = d;
     d = c % d;
