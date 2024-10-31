@@ -13,7 +13,10 @@ export default function brainCalc() {
     const question = readlineSync.question(
       `Question: ${expression}\nYour answer: `,
     );
-    const answer = new Function('return ' + expression)();
+    // const answer = new Function('return ' + expression)();
+    const answer = function() {
+      return + expression;
+    }
     if (parseInt(question, 10) !== parseInt(answer, 10)) {
       return console.log(
         `'${question}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${name}!`,
